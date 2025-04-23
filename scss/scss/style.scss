@@ -1,0 +1,30 @@
+$brand: green;
+$size: 200px;
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid $brand;
+    color: $brand;
+    width: $size;
+    height: $size;
+}
+@mixin flex($jpt)
+{
+    display: flex;
+    justify-content: $jpt;
+}
+.header
+{
+    @include flex(space-between)
+}
+.footer
+{
+    @include flex(start)
+}
+.nav
+{
+    ul{
+    @include flex(center)
+}
+}
